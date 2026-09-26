@@ -1,6 +1,7 @@
-# Mosaic — a shared pixel canvas (serverless MERN)
+# Mosaic — a shared pixel canvas 
 
-A single canvas that everyone who visits the site is drawing on together — like r/place, but small enough to run entirely on Netlify's free tier with no server to manage and no websockets.
+InternId : CITS6572 Name: Keya Goyal Duration : 6 Weeks 
+Project Scope :  A single canvas that everyone who visits the site is drawing on together — like r/place, but small enough to run entirely on Netlify's free tier with no server to manage and no websockets.
 
 ## Why this shape is unique
 
@@ -45,12 +46,6 @@ netlify dev
 ```
 Open the printed URL (usually `http://localhost:8888`) — open it in two tabs to watch pixels sync between them.
 
-## 2. Deploy to Netlify
-
-1. Push this project to a Git repo, then in Netlify: **Add new site → Import an existing project**.
-2. Build settings come from `netlify.toml` already (`npm run build`, publish `dist`, functions in `netlify/functions`).
-3. Add environment variables in **Site configuration → Environment variables**: `MONGODB_URI` (required) and `MONGODB_DB` (optional).
-4. Deploy. Share the URL — everyone who opens it is painting the same canvas.
 
 ## Extending it
 
