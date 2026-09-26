@@ -1,0 +1,137 @@
+.shell {
+  max-width: 780px;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 32px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.shell-header {
+  display: flex;
+}
+
+.brand { display: flex; align-items: center; gap: 12px; }
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, var(--lime) 0 25%, var(--cyan) 25% 50%, #ff6fae 50% 75%, #8c5bff 75% 100%);
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+}
+
+.brand-tag {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 1px;
+}
+
+.shell-footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.canvas-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.canvas-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--panel-raised);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+
+.status-dot.dot-ready { background: var(--lime); }
+.status-dot.dot-cooldown { background: var(--coral); }
+
+.canvas-wrap {
+  width: 100%;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #05060a;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+canvas.mosaic-canvas {
+  image-rendering: pixelated;
+  cursor: crosshair;
+  border-radius: 4px;
+}
+
+.palette-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 2px solid var(--line);
+  transition: transform 0.1s ease, border-color 0.1s ease;
+}
+
+.swatch:hover { transform: translateY(-2px); }
+
+.swatch.swatch-active {
+  border-color: var(--text);
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 2px var(--ink), 0 0 0 4px var(--text);
+}
+
+.hint-line {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.hint-line strong { color: var(--text); font-weight: 500; }
+
+.error-line {
+  text-align: center;
+  color: var(--coral);
+  font-size: 0.82rem;
+}

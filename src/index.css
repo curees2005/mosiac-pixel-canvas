@@ -1,0 +1,32 @@
+:root {
+  --ink: #0b0d12;
+  --panel: #12151c;
+  --panel-raised: #1a1e28;
+  --line: #232838;
+  --text: #eef0f6;
+  --text-muted: #838a9c;
+  --lime: #c8ff5e;
+  --cyan: #4fd3ff;
+  --coral: #ff6b6b;
+  --font-ui: "Sora", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  background: var(--ink);
+  background-image:
+    linear-gradient(180deg, #10131b 0%, var(--ink) 60%);
+  color: var(--text);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+button { font-family: inherit; cursor: pointer; }
+::selection { background: #2b3a1a; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
